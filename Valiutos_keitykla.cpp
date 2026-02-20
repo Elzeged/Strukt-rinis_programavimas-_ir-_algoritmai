@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 int main(){
+
 double BendrasGBP = 0.8729;
 double PirktiGBP = 0.8600;
 double ParduotiGBP = 0.9220;
@@ -15,11 +16,14 @@ double ParduotiINR = 107.8546;
 
 
 double x;//euras
-
+char kartoti;
+do{
 cout<<"Ką norėtumėt atlikti?"<<endl;
 cout<<"1. Valiutos kurso palyginimas su kita valiuta"<<endl;
 cout<<"2. Pirkti valiutą"<<endl;
 cout<<"3. Parduoti valiutą"<<endl;
+
+
 int v;// kintamasis
 cin>>v;
 if(v==1){
@@ -91,7 +95,7 @@ cout<<"Gauta suma "<<i<<endl;
 if(v==3){
 
 
-cout<<"Pasirinkite kurią vaiutą norite iškeisti į EUR"<<endl;
+cout<<"Pasirinkite kurią valiutą norite iškeisti į EUR"<<endl;
 cout<<"1.GBP"<<endl;
 cout<<"2.USD"<<endl;
 cout<<"3.INR"<<endl;
@@ -104,7 +108,7 @@ if(w==1){
 double e;//is GBP i eur
 cout<<"Įrašykite sumą"<<endl;
 cin>> x;
-e=x*ParduotiGBP;
+e=x/ParduotiGBP;
 cout<<"Gauta suma "<<e<<endl;
 }
 
@@ -114,7 +118,7 @@ if(w==2){
 double r;// is usd i eur
 cout<<"Įrašykite sumą"<<endl;
 cin>> x;
-r=x*ParduotiUSD;
+r=x/ParduotiUSD;
 cout<<"Gauta suma "<<r<<endl;
 }
 
@@ -124,13 +128,18 @@ if(w==3){
 double k;// is INR i eur
 cout<<"Įrašykite sumą"<<endl;
 cin>> x;
-k=x*ParduotiINR;
+k=x/ParduotiINR;
 cout<<"Gauta suma "<<k<<endl;
 
 }
 
 
 }
+cout<<"\n Ar norite kartoti? (t/n): ";
+cin>>kartoti;
+} while (kartoti == 't');
+
+cout<<"Programa baigta. "<<endl;
 
 return 0;
 
