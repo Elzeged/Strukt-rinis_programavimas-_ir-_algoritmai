@@ -65,7 +65,7 @@ do{
 
             int r = -1;//-1 reiskia kad nera rastas
 
-            for(int i=1; i<mok;i++){
+            for(int i=0; i<mok;i++){
                 if(vardai[i]==var){
                     r=i;
                     break;
